@@ -1,0 +1,211 @@
+	/*초기화*/
+	* {
+		margin : 0; 
+		padding : 0; 
+		font-family: "Nanum Gothic", sans-serif;
+	}
+	li {
+		list-style: none; 
+	}
+	a { 
+		text-decoration: none;
+		font-family:'Crete Round', serif;
+		color : FFFFFF;
+	}
+	img {
+		border : 0;
+	}
+	header {
+		width : 960px;
+		height : 150px;
+	}
+	body {
+		width : 960px;
+		margin : 0 auto;
+		overflow: scroll;
+		background-color: #F2F2F2;
+	}
+	aside {
+		position : fixed;
+		width : 260px;
+		margin : 0 50px 0 0;
+	}
+	aside > #logo {
+		background-color: #7BB5BC;
+		height : 120px;
+		margin : 0 50px 50px 10px;
+		line-height: 130px;
+		text-align: center;
+		font-size: 20pt;
+	}
+	aside > #navigation {
+		margin : 0 40px 0 0;
+	}
+	.menu li {
+		background-color: #FFFFFF;
+		color : #2E2E2E;
+		border : 1px solid #D8D8D8;
+		height : 50px;
+		margin : 0 10px 20px 10px;
+		padding : 20px auto auto 50px;
+	}
+	.menu li:hover {
+		background-color : #7BB5BC;
+		color : white;
+	}
+	.menu li:hover .menu-icon-black {
+		opacity : 0;
+		transition : opacity 0.5s;
+	}
+	.menu li:hover .menu-icon-white {
+		opacity : 1;
+		transition : opacity 0.5s;
+	}
+	.menu li .menu-icon-black {
+		display : inline-block;
+		position:absolute;
+		margin : 15px 10px 0px 20px;
+	}
+	.menu li .menu-icon-white {
+		display : inline-block;
+		position:relative;
+		margin : 15px 10px 0px 20px;
+		opacity : 0;
+	}
+	.menu li:hover .menu-text {
+		transform: translate(10px, 0px);
+		letter-spacing: 4px;
+		transition: 1s;
+	}
+	.menu li .menu-text {
+		display : inline-block;
+		margin : 17px 30px 0px 0px;
+		float : right;
+		font-family: 'Hammersmith One', sans-serif;
+		font-size: 10pt;
+	}
+	#content {
+		margin-left : 260px;
+		width : 700px;
+		background-color: #FFFFFF;
+		border : 1px solid #D8D8D8;
+	}
+	.article-header {
+		font-size: 10pt;
+		margin : 50px 20px;
+		color : #6E6E6E;
+		font-family: 'Hammersmith One', sans-serif;
+	}
+	#article:first-child {
+		margin-top : 100px;
+	}
+	#article {
+		margin : 20px 100px 20px 100px;
+	}
+	#article > article {
+		margin : 50px 0 50px 0;
+	}
+	.article-title {
+		margin : 0px 25px;
+		padding : 10px;
+		font-size: 15pt;
+	}
+	.article-body, .tab-article {
+		padding-top : 10px;
+		margin : 0px 25px;
+		padding : 10px;
+		font-size : 9pt;
+		line-height : 20px;
+	}
+	footer {
+		color : #D8D8D8;
+		text-align: center;
+		padding-top : 30px;
+		padding-bottom: 20px;
+		margin: 0;
+		display : block;
+	}
+	#hover-image1 {
+		position: absolute;
+		opacity : 0;
+	}
+	#hover-image2 {
+		position:relative;
+		left: 0;
+		top: 0;
+		opacity : 1;
+	}
+	.hover-image:hover #hover-image2 {
+		opacity : 0;
+		transition: 0.5s;
+	}
+	.hover-image:hover #hover-image1 {
+		opacity : 1;
+	}
+	section.tab-title {
+		padding:0; overflow: hidden; margin:0 auto;
+	}
+	section.tab-title > label {
+		display : inline-block; font-size: 13pt; color : white;
+		background-color: #D8D8D8;
+		width:210px; height:50px; line-height: 50px;
+		text-align: center;
+		font-family: 'Hammersmith One', sans-serif; cursor:pointer;
+	}
+	section.tab-title > label:nth-of-type(1) {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+	section.tab-title > label:nth-of-type(2) {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+	#info1:checked ~ section.tab-title > label:nth-of-type(1) {
+		background-color: #7BB5BC;
+		color : white;
+	}
+	#info2:checked ~ section.tab-title > label:nth-of-type(2) {
+		background-color: #7BB5BC; color : white;
+	}
+	#info1,#info2 {display : none;}
+	#info1:checked ~ #tab-item1 {display : block;}
+	#info2:checked ~ #tab-item2 {display : block;}
+	#info1:checked ~ #tab-item1 {display : none;}
+	#info2:checked ~ #tab-item2 {display : none;}
+
+
+	input[type = "checkbox"] {display : none;}
+	.check-button {
+		text-align: center;
+		line-height: 50px;
+		width : 210px;
+		height : 50px;
+		background-color : #7bb5bc;
+		color : white;
+		font-family: 'Jua', sans-serif;
+		font-size: 13pt;
+		margin : 0 auto;
+		cursor : pointer;
+	}
+	input[type = "checkbox"]:checked ~ .hidden-article {display : none;}
+	input[type = "checkbox"] ~ .hidden-article {display : block;}
+	.hidden-article {
+		width : 430px; margin : 0 auto;
+	}
+	#hidden-table {border: 1px solid #ddd;}
+	#hidden-table tr,td {
+		border-left : 0; border-right : 0;border-bottom: 3px;
+	}
+	.photo {margin : 10px 10px;}
+	.photo-article {
+		text-align: center;
+		margin : 10px 10px;
+		font-size : 9pt;
+		color : black;
+	}
+	#img-left {
+		float : left;
+	}
+	#img-right {
+		float : right;
+	}
