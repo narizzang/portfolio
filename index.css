@@ -16,11 +16,11 @@
 		border : 0;
 	}
 	header {
-		width : 960px;
+		width : 1024px;
 		height : 150px;
 	}
 	body {
-		width : 960px;
+		width : 1024px;
 		margin : 0 auto;
 		overflow: scroll;
 		background-color: #F2F2F2;
@@ -86,7 +86,7 @@
 	}
 	#content {
 		margin-left : 260px;
-		width : 700px;
+		width : 764px;
 		background-color: #FFFFFF;
 		border : 1px solid #D8D8D8;
 	}
@@ -100,7 +100,7 @@
 		margin-top : 100px;
 	}
 	#article {
-		margin : 20px 100px 20px 100px;
+		margin : 20px 60px 20px 60px;
 	}
 	#article > article {
 		margin : 50px 0 50px 0;
@@ -109,13 +109,21 @@
 		margin : 0px 25px;
 		padding : 10px;
 		font-size: 15pt;
+		line-height: 20px;
+		font-weight: bold;
+
 	}
-	.article-body, .tab-article {
+	.article-body {
 		padding-top : 10px;
-		margin : 0px 25px;
+		margin : 0px 35px;
 		padding : 10px;
 		font-size : 10pt;
 		line-height : 20px;
+	}
+	.article-index {
+		font-size: 12pt;
+		margin-bottom: 5px;
+		font-weight: bold;
 	}
 	footer {
 		color : #D8D8D8;
@@ -125,54 +133,6 @@
 		margin: 0;
 		display : block;
 	}
-	#hover-image1 {
-		position: absolute;
-		opacity : 0;
-	}
-	#hover-image2 {
-		position:relative;
-		left: 0;
-		top: 0;
-		opacity : 1;
-	}
-	.hover-image:hover #hover-image2 {
-		opacity : 0;
-		transition: 0.5s;
-	}
-	.hover-image:hover #hover-image1 {
-		opacity : 1;
-	}
-	section.tab-title {
-		padding:0; overflow: hidden; margin:0 auto;
-	}
-	section.tab-title > label {
-		display : inline-block; font-size: 13pt; color : white;
-		background-color: #D8D8D8;
-		width:210px; height:50px; line-height: 50px;
-		text-align: center;
-		font-family: 'Hammersmith One', sans-serif; cursor:pointer;
-	}
-	section.tab-title > label:nth-of-type(1) {
-		border-top-left-radius: 20px;
-		border-top-right-radius: 20px;
-	}
-	section.tab-title > label:nth-of-type(2) {
-		border-top-left-radius: 20px;
-		border-top-right-radius: 20px;
-	}
-	#info1:checked ~ section.tab-title > label:nth-of-type(1) {
-		background-color: #7BB5BC;
-		color : white;
-	}
-	#info2:checked ~ section.tab-title > label:nth-of-type(2) {
-		background-color: #7BB5BC; color : white;
-	}
-	#info1,#info2 {display : none;}
-	#info1:checked ~ #tab-item1 {display : block;}
-	#info2:checked ~ #tab-item2 {display : block;}
-	#info1:checked ~ #tab-item1 {display : none;}
-	#info2:checked ~ #tab-item2 {display : none;}
-
 
 	input[type = "checkbox"] {display : none;}
 	.check-button {
